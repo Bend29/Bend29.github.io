@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="container-small">
+    <div class="new-question">
+      <div class="new-question__container">
+        <div class="new-question__top">
+          <div class="new-question__title h1">Задать вопрос</div>
+          <p class="new-question__text">Мастер ответит на ваш вопрос в течение 24 часов</p>
+        </div>
+        <div class="form form--query-repairs form--new-question">
+          <form>
+            <div class="form__item">
+              <label class="form__label required">
+                <span>Ваше имя</span>
+                <input type="text" class="form__input" required />
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+            </div>
+            <div class="form__item">
+              <label class="form__label required">
+                <span>Ваш e-mail</span>
+                <input type="email" class="form__input" required />
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+              <div class="form__note">Мы отправим вам уведомление, когда мастер ответит на вопрос</div>
+            </div>
+            <div class="form__item">
+              <label class="form__label required">
+                <span>Ваш вопрос</span>
+                <textarea
+                  class="form__input form__input--textarea"
+                  required
+                  placeholder="Пожалуйста, укажите марку и, по возможности, модель техники. Подробно опишите неисправности, чтобы мастер мог ответить."
+                ></textarea>
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+            </div>
+            <div class="form__item">
+              <div class="dropzone">
+                <div class="dropzone_preview"></div>
+                <button type="button" class="btn btn--border dz-message dropzone__button-add" data-dz-message>
+                  <svg class="btn__btn-icon">
+                    <use xlink:href="./img/icons.svg#icon_clip"></use>
+                  </svg>
+                  <span>Прикрепить фото/видео</span>
+                </button>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <a href="#question-popup-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+              <div class="form__note">
+                Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

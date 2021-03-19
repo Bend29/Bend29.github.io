@@ -1,0 +1,23 @@
+.masters {
+  &__title {
+    margin-bottom: 24px;
+    z-index: 2;
+    position: relative;
+    display: inline-flex;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    @media #{$md-and-up} {
+      justify-content: flex-start;
+    }
+  }
+}
+

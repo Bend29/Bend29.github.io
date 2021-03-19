@@ -1,0 +1,228 @@
+.section-types-repairs {
+  padding-top: 32px;
+  @media #{$md-and-up} {
+    padding-top: 64px;
+    background-image: url("../../img/picture/fridge-1280.png");
+    background-size: 578px;
+    background-position: top 40px right -21px;
+    background-repeat: no-repeat;
+  }
+  @media #{$xl-and-up} {
+    padding-top: 80px;
+    background-position: top right -38px;
+    background-size: auto;
+  }
+
+  &__title-wrapper {
+    margin-bottom: 20px;
+    @media #{$md-and-up} {
+      margin-bottom: 28px;
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  .section-types-repairs__title {
+    margin-bottom: 8px;
+    @media #{$md-and-up} {
+      margin-bottom: 16px;
+    }
+  }
+  &__sub-title {
+    margin-top: 8px;
+    @include font(20, 32);
+    font-weight: 500;
+    @media #{$lg-and-up} {
+      text-transform: uppercase;
+      font-weight: 700;
+      @include font(20, 28);
+    }
+  }
+  &__button {
+    display: none;
+    @media #{$md-and-up} {
+      display: inline-flex;
+      margin-bottom: 72px;
+    }
+  }
+  &__text {
+    display: none;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+      max-width: 484px;
+      display: block;
+      @include font(16, 24);
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 64px;
+    }
+  }
+}
+.repairs-wrapper {
+  margin: auto;
+}
+.repairs {
+  &__wrapper {
+    text-align: center;
+    @media #{$lg-and-up} {
+      padding-left: 83px;
+    }
+  }
+
+  .repairs__button {
+    margin-top: 32px;
+    display: block;
+    @media #{$lg-and-up} {
+      margin-left: -83px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0 $negIndent;
+    padding: 0 $posIndent;
+    transition: height 0.3s;
+    @media screen and (min-width: 600px) {
+      margin-right: -24px;
+      padding-right: 0;
+    }
+    @media #{$md-and-up} {
+      width: calc(100% + 64px);
+      margin: -32px;
+      padding: 32px;
+    }
+    @media #{$lg-and-up} {
+      width: calc(100% + 32px);
+      margin: -16px;
+      padding: 16px;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    @media screen and (min-width: 600px) {
+      margin-right: 24px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 600px) {
+      width: calc(50% - 24px);
+      margin-right: 24px;
+      margin-bottom: 24px;
+    }
+    @media #{$lg-and-up} {
+      width: calc(50% - 32px);
+      margin-right: 32px;
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      width: calc(100% / 3 - 32px);
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+    &:nth-child(odd):not(:first-child) {
+      @media screen and (min-width: 600px) {
+        &.repairs__item--button {
+          width: 100%;
+        }
+      }
+      @media #{$medium-large-only} {
+        &.repairs__item--button {
+          width: 100%;
+        }
+      }
+      @media #{$xl-and-up} {
+        &.repairs__item--button {
+          width: calc(100% / 3 - 32px);
+        }
+      }
+    }
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10) {
+      &:last-child {
+        @media #{$xl-and-up} {
+          &.repairs__item--button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8),
+    &:nth-child(11) {
+      &:last-child {
+        @media #{$xl-and-up} {
+          &.repairs__item--button {
+            width: calc(100% / 3 * 2 - 32px);
+          }
+        }
+      }
+    }
+  }
+  &__btn-popup {
+    width: 100%;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 4px 24px;
+    text-decoration: none;
+    @include font(16, 26);
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+    background-color: $white;
+    color: $blue;
+    min-height: 56px;
+    height: 100%;
+    @media #{$lg-and-up} {
+      @include font(20, 32);
+      min-height: 72px;
+    }
+    &:hover {
+      color: $deep-blue;
+      box-shadow: 0 8px 24px rgba(35, 100, 175, 0.4);
+      .repairs__icon {
+        fill: $deep-blue;
+      }
+    }
+  }
+  &__text {
+    margin-right: 16px;
+  }
+  &__icon--go {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+  }
+  &__icon {
+    fill: $blue;
+    flex-shrink: 0;
+    &:first-child {
+      width: 22px;
+      height: 22px;
+      margin-right: 12px;
+      @media #{$lg-and-up} {
+        width: 30px;
+        height: 30px;
+        margin-right: 16px;
+      }
+    }
+  }
+  &--visible-items {
+    .repairs {
+      &__wrapper {
+        min-height: auto;
+        height: auto;
+      }
+    }
+  }
+}

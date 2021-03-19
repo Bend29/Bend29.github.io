@@ -1,0 +1,15 @@
+.repair-district-detail {
+  &__list {
+    &.page-content {
+      margin-right: 0;
+    }
+    a:not([href]) {
+      color: $black;
+      border-bottom: none;
+    }
+  }
+  .top-page__wrapper{
+    height: auto;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,338 @@
+@import "./node_modules/css-reset-and-normalize/scss/reset-and-normalize";
+@import "~swiper/swiper-bundle.min.css";
+@import "~select2/dist/css/select2.min.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "~lazyloadxt/src/jquery.lazyloadxt.fadein.css";
+@import "mixins/mixins";
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/variables";
+@import "variables/media-query";
+@import "components/buttons";
+@import "components/menu-accordion";
+@import "components/section-accordion";
+@import "components/counters";
+@import "components/input";
+@import "components/review-item";
+@import "components/action-item";
+@import "components/slider";
+@import "components/master-item";
+@import "components/readmore";
+@import "components/offer-wrapper";
+@import "components/table";
+@import "components/breadcrumbs";
+@import "components/video-iframe-holder";
+@import "components/top-page";
+@import "components/comment";
+@import "components/dropdown";
+@import "components/question-item";
+@import "components/pagination";
+@import "components/page-content";
+@import "components/article-detail";
+@import "components/article-table";
+@import "components/contact";
+@import "components/not-found";
+@import "components/pop-up";
+@import "components/form";
+@import "components/zoom-popup";
+@import "layout/layout";
+@import "src/components/header/header.scss";
+@import "src/components/footer/footer.scss";
+@import "src/components/privilege/privilege.scss";
+@import "src/components/work-scheme/workScheme.scss";
+@import "src/components/types-repairs/typesRepairs";
+@import "src/components/blog-popular/blogPopular.scss";
+@import "src/components/work-time/workTime.scss";
+@import "src/components/question-popular/questionPopular.scss";
+@import "src/components/new-reviews/newReviews.scss";
+@import "src/components/actions/actions.scss";
+@import "src/components/masters/masters.scss";
+@import "src/components/service-geography/serviceGeography.scss";
+@import "src/components/new-reviews/newReviews.scss";
+@import "src/components/actions/actions.scss";
+@import "src/components/section-seo/sectionSeo.scss";
+@import "src/components/brands/brands.scss";
+@import "src/components/get-sale/getSale.scss";
+@import "src/components/top-repair-type/topRepairType.scss";
+@import "src/components/video/video.scss";
+@import "src/components/breaking-washers/breakingWashers.scss";
+@import "src/components/price-list/priceList.scss";
+@import "src/components/repair-type-seo/repairTypeSeo.scss";
+@import "src/components/top-repair-appliances/topRepairAppliances.scss";
+@import "src/components/top-questions/topQuestions.scss";
+@import "src/components/write-comment/writeComment.scss";
+@import "src/components/questions-list/questionsList.scss";
+@import "src/components/geography/geography.scss";
+@import "src/components/masters-list/mastersList.scss";
+@import "src/components/question-detail/questionDetail.scss";
+@import "src/components/master-info/masterInfo.scss";
+@import "src/components/master-reviews/masterReviews.scss";
+@import "src/components/top-instructions-type/topInstructionsType.scss";
+@import "src/components/alphabet-type/alphabetType.scss";
+@import "src/components/instruction-detail/instructionDetail.scss";
+@import "src/components/how-call-master/howCallMaster.scss";
+@import "src/components/blog-list/blogList.scss";
+@import "src/components/top-warranty-case/topWarrantyCase";
+@import "src/components/call-master-guarantee/callMasterGuarantee";
+@import "src/components/warranty-contact/warrantyContact";
+@import "src/components/warranty-questions/warrantyQuestions";
+@import "src/components/contacts/contacts";
+@import "src/components/feedback-reviews/feedbackReviews";
+@import "src/components/feedback-detail-review/feedbackDetailReview";
+@import "src/components/feedback/feedback";
+@import "src/components/feedback-list/feedbackList";
+@import "src/components/repair-district-top/repairDistrictTop";
+@import "src/components/repair-district-map/repairDistrictMap";
+@import "src/components/chief-master/chiefMaster";
+@import "src/components/area-responsibility/areaResponsibility";
+@import "src/components/contact-district/contactDistrict";
+@import "src/components/repair-district-detail/repairDistrictDetail";
+@import "src/components/warning/warning";
+@import "src/components/new-question/newQuestion";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: $black;
+}
+
+body {
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+body {
+  @include font(16, 26);
+  position: relative;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.layout,
+.wrapper {
+  position: relative;
+  height: 100%;
+
+  &::after {
+    content: "";
+  }
+}
+.wrapper {
+  overflow-y: auto;
+}
+
+
+.container-footer {
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  @media #{$md-and-up} {
+    width: 702px;
+    margin: auto;
+    //padding: 0 33px;
+    padding: 0px;
+  }
+  @media #{$xl-and-up} {
+    width: 1208px;
+    //padding: 0 36px;
+  }
+}
+
+.link {
+  display: inline-block;
+  height: 100%;
+  color: $white;
+  border-bottom: 1px solid $border-link;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-bottom-color 0.3s;
+  &--dashed {
+    border-style: dashed;
+  }
+  &--blue-border {
+    border-color: $blue;
+    color: $black;
+  }
+  &--blue {
+    color: $blue;
+    &:hover {
+      color: $deep-blue;
+    }
+  }
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+h1,
+.h1 {
+  font-weight: 600;
+  @include font(24, 32);
+  margin: 0;
+  text-transform: uppercase;
+  @media #{$md-and-up} {
+    @include font(32, 44);
+  }
+  @media #{$xl-and-up} {
+    @include font(50, 60);
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  @include font(20, 28);
+  margin: 0;
+  @media #{$md-and-up} {
+    @include font(26, 34);
+  }
+  @media #{$xl-and-up} {
+    @include font(32, 42);
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+  @include font(16, 24);
+  margin: 0;
+  text-transform: uppercase;
+  @media #{$xl-and-up} {
+    @include font(20, 28);
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 500;
+  @include font(16, 24);
+  margin: 0;
+  @media #{$xl-and-up} {
+    @include font(20, 28);
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  ymaps {
+    display: block;
+  }
+}
+
+.instruction-link {
+  background: $white;
+  box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+  border-radius: 12px;
+  padding: 16px 24px;
+  @media #{$xl-and-up} {
+    padding: 24px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $blue;
+    transition: color 0.3s;
+    font-weight: 700;
+    @include font(16, 24);
+    &:hover {
+      color: $deep-blue;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    fill: $blue;
+    margin-right: 16px;
+  }
+  &__captcha {
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid $light-blue;
+  }
+}
+
+// TODO: грохнуть перед сдачей испорт и сам компонент
+
+.sitemap {
+  background: $black;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+  overflow: auto;
+  &.show {
+    z-index: 9999;
+    opacity: 1;
+  }
+}
+
+.page-list {
+  height: 100%;
+  overflow: auto;
+  padding: 32px 0;
+  li {
+    padding-left: 24px;
+    color: $gray;
+    ul {
+      li {
+        padding-left: 0;
+      }
+    }
+    a {
+      display: block;
+      color: $white;
+      padding: 4px 32px;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+.display-none {
+  display: none;
+}
+
+img[data-src] {
+  transition: opacity 0.02s;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

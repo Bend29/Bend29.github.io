@@ -1,0 +1,116 @@
+.alphabet-type {
+  &__search {
+    max-width: 995px;
+    &.dropdown .dropdown__label {
+      font-weight: 500;
+      color: $gray;
+    }
+  }
+  &__list {
+    width: 100vw;
+    margin: 32px $negIndent 0;
+    @media #{$md-and-up} {
+      width: calc(100% + 24px);
+      margin: 40px -24px -40px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media #{$lg-and-up} {
+      margin: 48px -24px -56px 0;
+    }
+  }
+  //&--brand {
+  //  .alphabet-type {
+  //    &__list {
+  //      @media #{$md-and-up} {
+  //        column-count: 4;
+  //        display: block;
+  //      }
+  //      @media #{$lg-and-up} {
+  //        column-count: 6;
+  //      }
+  //    }
+  //  }
+  //  .alphabet-item {
+  //    @media #{$md-and-up} {
+  //      page-break-inside: avoid;
+  //      break-inside: avoid;
+  //      width: 100%;
+  //    }
+  //    @media #{$lg-and-up} {
+  //      width: 100%;
+  //    }
+  //  }
+  //}
+}
+
+.alphabet-item {
+  border: 1px solid $light-blue;
+  padding: 18px 24px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  &:first-child {
+    border-radius: 40px 40px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 40px 40px;
+  }
+  &:first-child:last-child {
+    border-radius: 40px;
+  }
+  @media #{$md-and-up} {
+    border: none;
+    margin-top: 0;
+    padding: 0;
+    width: calc(100% / 4);
+    margin-bottom: 40px;
+  }
+  @media #{$lg-and-up} {
+    width: calc(100% / 6);
+    margin-bottom: 56px;
+  }
+  &__label {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:after {
+      display: none;
+    }
+  }
+  &__container {
+    @media #{$md-and-up} {
+      overflow: visible;
+      height: 100% !important;
+    }
+  }
+  &__label-icon {
+    @media #{$md-and-up} {
+      display: none;
+    }
+  }
+  &__list {
+    column-count: 2;
+    margin-top: 16px;
+    @media #{$md-and-up} {
+      column-count: unset;
+      margin-top: 24px;
+    }
+    li {
+      width: 100%;
+      margin-right: 24px;
+      margin-bottom: 16px;
+      @media #{$md-and-up} {
+        width: 100%;
+      }
+      a {
+        color: $blue;
+        transition: color 0.2s;
+        @include font(16, 24px);
+        &:hover {
+          color: $deep-blue;
+        }
+      }
+    }
+  }
+}

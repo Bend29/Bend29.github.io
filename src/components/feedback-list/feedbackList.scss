@@ -1,0 +1,117 @@
+.feedback-list {
+  &__answer {
+    margin-top: 24px;
+    @media #{$md-and-up} {
+      margin-top: 32px;
+    }
+    @media #{$lg-and-up} {
+      margin-top: 40px;
+    }
+    .comment__text{
+      color: $gray;
+    }
+  }
+  &__filters-desktop {
+    display: none;
+    @media #{$xl-and-up} {
+      display: block;
+    }
+  }
+  .dropdown__label {
+    margin-bottom: 12px;
+    color: $gray;
+  }
+  &__filters-mobile {
+    text-align: center;
+    margin-bottom: 32px;
+    @media #{$md-and-up} {
+      text-align: left;
+    }
+    @media #{$xl-and-up} {
+      display: none;
+    }
+  }
+  &__filters-icon {
+    width: 18px ;
+    height: 18px;
+    margin-right: 8px;
+    fill: currentColor;
+    mask-size: contain;
+    background-image: url("../../img/icons/icon_filter.svg");
+    background-repeat: no-repeat;
+  }
+  &__filters-btn {
+    &:hover {
+      .feedback-list__filters-icon {
+        background-image: url("../../img/icons/icon_fillter-white.svg");
+      }
+    }
+  }
+}
+
+
+.filters-pop-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
+  z-index: 22;
+  @media #{$xl-and-up} {
+    display: none;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 25px;
+    border-bottom: 1px solid $light-blue;
+    @media #{$md-and-up} {
+      padding: 26px 32px;
+    }
+  }
+  &__body {
+    padding: 24px 25px;
+    @media #{$md-and-up} {
+      padding: 26px 32px;
+      .dropdown__label{
+        color: $gray;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .questions-list__search {
+        margin-right: 0;
+      }
+
+    }
+  }
+  &__btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $blue;
+      &:hover {
+        fill: $deep-blue;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-top: 32px;
+    text-align: center;
+    @media #{$md-and-up} {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+
+}

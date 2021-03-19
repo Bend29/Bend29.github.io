@@ -1,0 +1,44 @@
+.contact {
+  &--margin {
+    margin-bottom: 16px;
+  }
+  &__label {
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  &__item {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    font-weight: bold;
+    color: $black;
+    border-bottom: 1px dashed $blue;
+    &:hover {
+      border-bottom-color: transparent;
+    }
+    &--email {
+      font-weight: 400;
+      color: $blue;
+      border-bottom: 1px solid  $light-blue;
+    }
+  }
+  &__note {
+    margin-top: 6px;
+    @include font(14,22);
+    color: $gray;
+    @media #{$lg-and-up} {
+      @include font(16,24);
+    }
+  }
+  &__container {
+   & > .contact__note {
+      margin-top: 18px;
+     @media #{$lg-and-up} {
+       margin-bottom: 26px;
+     }
+    }
+  }
+}

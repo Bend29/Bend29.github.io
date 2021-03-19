@@ -1,0 +1,95 @@
+.master-reviews {
+  &__row-title {
+    display: flex;
+    align-items: baseline;
+  }
+  &__title {
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  &__amount {
+    margin-left: 16px;
+    color: $gray;
+    @media #{$md-and-up} {
+      margin-left: 24px;
+    }
+  }
+  &__chart-item {
+    margin-bottom: 8px;
+  }
+  &__row {
+    @media #{$md-and-up} {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+  &__chart {
+    margin-bottom: 32px;
+    @media #{$md-and-up} {
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    @media #{$md-and-up} {
+      display: block;
+      margin-left: auto;
+    }
+  }
+  &__item {
+    margin-bottom: 32px;
+    &.hidden {
+      display: none;
+    }
+
+  }
+  &__reviews {
+    margin-top: 40px;
+
+  }
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  &__text {
+    color: gray;
+    @include font(16, 24);
+    width: 86px;
+    margin-right: 8px;
+    @media #{$md-and-up} {
+      margin-right: 16px;
+    }
+  }
+  &__scale {
+    width: 177px;
+    background: $light-blue;
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+    @media #{$md-and-up} {
+      width: 181px;
+    }
+  }
+  &__scale-current {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $green;
+    box-shadow: 0px 4px 12px rgba(35, 100, 175, 0.2);
+    z-index: 2;
+    border-radius: 4px;
+  }
+  &__rating-amount {
+    margin-left: 24px;
+    &.empty {
+      color: $light-blue;
+    }
+  }
+}
+

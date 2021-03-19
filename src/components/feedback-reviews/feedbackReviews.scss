@@ -1,0 +1,25 @@
+
+.feedback-reviews {
+  .master-reviews__reviews {
+    margin-top: 0;
+  }
+  &__item {
+    padding-bottom: 24px;
+    @media #{$md-and-up} {
+      padding-bottom: 32px;
+    }
+    @media #{$lg-and-up} {
+      padding-bottom: 40px;
+    }
+    border-bottom: 1px solid $light-blue;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__button {
+    text-align: center;
+    @media #{$md-and-up} {
+      text-align: left;
+    }
+  }
+}

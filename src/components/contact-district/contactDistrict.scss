@@ -1,0 +1,23 @@
+
+.contact-district {
+  .warranty-contact__text{
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .contact__label {
+    @media #{$md-and-up} {
+      @include font(20,32)
+    }
+  }
+  .contact__container {
+    margin-bottom: 16px;
+    @media #{$md-and-up} {
+      margin-bottom: 24px;
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+}

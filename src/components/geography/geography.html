@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="top-page">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="" class="breadcrumbs__link">
+            <span>Главная</span>
+            <svg class="breadcrumbs__link-icon">
+              <use xlink:href="img/icons.svg#icon_triangle"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="breadcrumbs__item current">
+          <a href="" class="breadcrumbs__link">
+            <span>География ремонта</span>
+            <svg class="breadcrumbs__link-icon">
+              <use xlink:href="img/icons.svg#icon_triangle"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="top-page__content">
+      <h1 class="top-page__title">География обслуживания и ремонта бытовой техники</h1>
+    </div>
+  </div>
+
+  <div class="geography">
+    <div class="js-tabs">
+      <div class="geography__top">
+        <div class="geography__search dropdown dropdown--search js-search-parent">
+          <label class="dropdown__label" for="2">Населённый пункт</label>
+          <select id="2" class="js-search" name="type" data-placeholder="Начните вводить название">
+            <option value selected>Начните вводить название</option>
+            <option value="1">Апрелевка</option>
+            <option value="3">Балашиха</option>
+            <option value="4">Ватутинки</option>
+          </select>
+        </div>
+        <div class="geography__tabs">
+          <a class="geography__toggle js-tabs-target" href="#tabs-1">Картой</a>
+          <a class="geography__toggle js-tabs-target" href="#tabs-2">Списком</a>
+        </div>
+      </div>
+      <div class="js-tabs-containe geography__container">
+        <div id="tabs-1" class="js-tabs-item geography__wrapper geography__wrapper--map">
+          <div class="yandex-map js-map geography__map">
+            <iframe
+              data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A2a2fdbd44f540667bb5093d746e4a486c0ce23539c462004a71173b8dfadeff1&amp;source=constructor"
+            ></iframe>
+          </div>
+        </div>
+        <div id="tabs-2" class="js-tabs-item geography__wrapper">
+          <div class="region js-spoiler opened">
+            <div class="region__label js-spoiler-btn">
+              <span>Москва</span>
+              <svg class="region__icon">
+                <use xlink:href="img/icons.svg#icon_arrow-multi-color"></use>
+              </svg>
+            </div>
+            <div class="region__container js-spoiler-container">
+              <ul class="region__content region-list js-spoiler-content js-scroll">
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> ЮВАО </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="region js-spoiler">
+            <div class="region__label js-spoiler-btn">
+              <span>Московская область</span>
+              <svg class="region__icon">
+                <use xlink:href="img/icons.svg#icon_arrow-multi-color"></use>
+              </svg>
+            </div>
+            <div class="region__container js-spoiler-container">
+              <ul class="region__content region-list js-spoiler-content js-scroll">
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Апрелевка </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Бронницы </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Звенигород </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Апрелевка </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Бронницы </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Бронницы </a>
+                </li>
+                <li class="region-list__item">
+                  <a href="" class="region-list__link"> Звенигород </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

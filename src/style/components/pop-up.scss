@@ -1,0 +1,125 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  background: rgba($black, 0.4);
+  z-index: 22;
+
+  &__btn-close {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &__icon-close {
+    width: 100%;
+    height: 100%;
+    fill: $white;
+    &:hover {
+      fill: $orange;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    text-align: right;
+    margin: auto;
+
+    @media #{$md-and-up} {
+      width: 704px;
+    }
+    @media #{$md-and-up} {
+      width: 792px;
+    }
+  }
+  &__container {
+    text-align: left;
+    padding: 24px 24px;
+    background: $white;
+    border-radius: 24px;
+    margin-top: -8px;
+    @media #{$md-and-up} {
+      padding: 48px;
+      margin-top: 0;
+    }
+    @media #{$lg-and-up} {
+      padding: 56px 102px;
+    }
+  }
+  &__title.h1 {
+    margin-bottom: 16px;
+    @media #{$md-and-up} {
+      margin-bottom: 24px;
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  &__top {
+    margin-bottom: 8px;
+    @media #{$md-and-up} {
+      margin-bottom: 24px;
+    }
+  }
+  &__text {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .link {
+      display: inline;
+    }
+  }
+  .form__item {
+    @media #{$small-only} {
+      margin-bottom: 8px;
+    }
+  }
+  &--comment {
+    background-color: transparent;
+    .pop-up__btn-close {
+      width: 32px;
+      height: 32px;
+      margin-top: 16px;
+      margin-right: 16px;
+    }
+    .pop-up__icon-close {
+      fill: $blue;
+      &:hover {
+        fill: $deep-blue;
+      }
+    }
+    .pop-up__top {
+      margin-bottom: 16px;
+      @media #{$md-and-up} {
+        margin-bottom: 24px;
+      }
+    }
+    .pop-up__wrapper {
+      border-radius: 24px;
+      background-color: $light-gray;
+      box-shadow: 0 8px 24px rgba(35, 100, 175, 0.4);
+    }
+    .pop-up__container {
+      border-radius: 0;
+      background-color: transparent;
+      margin-top: -32px;
+      padding: 0 24px 24px 24px;
+      @media #{$md-and-up} {
+        margin-top: 0;
+        padding: 0 32px 42px 32px;
+      }
+    }
+    .pop-up__title {
+      display: inline-block;
+      padding-right: 40px;
+    }
+
+  }
+}

@@ -1,0 +1,52 @@
+.menu-accordion {
+  width: 100%;
+  border-top: 1px solid $border-default;
+  &__item {
+    padding: 16px 24px;
+    border-bottom: 1px solid $border-default;
+    position: relative;
+    &.active {
+      padding-bottom: 24px;
+      .menu-accordion__label {
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+      .menu-accordion__label-icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+  &__label {
+    position: relative;
+    display: block;
+    @include font(16, 26);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 12px;
+      height: 7px;
+      background-image: url("../../img/icons/icon_arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+  }
+  &__label-icon {
+    width: 12px;
+    height: 7px;
+    fill: $blue;
+    flex-shrink: 0;
+  }
+  &--header {
+    color: $white;
+  }
+}

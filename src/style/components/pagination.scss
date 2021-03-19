@@ -1,0 +1,124 @@
+.pagination {
+  @media #{$md-and-up} {
+    margin-left: -16px;
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$lg-and-up} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__list {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+    @media #{$lg-and-up} {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    color: $blue;
+    margin-right: 8px;
+    position: relative;
+    height: 42px;
+    &:first-child,
+    &:last-child {
+      a::before {
+        display: none;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    > span {
+      padding: 14px 16px;
+      display: block;
+    }
+    a {
+      position: relative;
+      z-index: 2;
+      color: inherit;
+      padding: 14px 16px;
+      display: block;
+      &::before {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+        background: $light-blue;
+        z-index: 1;
+      }
+      span {
+        position: relative;
+        z-index: 2;
+      };
+    }
+    &.disabled {
+      color: $gray;
+      pointer-events: none;
+    }
+
+
+    &.current {
+      cursor: default;
+      pointer-events: none;
+      a {
+        color: $black;
+        &::before {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        a::before {
+          background: $light-blue;
+          color: $black;
+        }
+      }
+    }
+    &:hover {
+      color: $deep-blue;
+      a::before {
+        opacity: 1;
+        background: $light-gray;
+      }
+    }
+  }
+  &__item-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    &--prev {
+      transform: rotate(-180deg);
+    }
+    &--next {
+    }
+  }
+  &__amount-items {
+    margin-left: 16px;
+    @include font(14, 22);
+    color: $gray;
+  }
+
+  &--gray-bg {
+    .pagination {
+      &__item:not(.current) {
+        a {
+          &::before {
+            background: $white;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

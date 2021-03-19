@@ -1,0 +1,61 @@
+.repair-type-seo {
+  &__container {
+    //padding-bottom: 24px;
+  }
+  &__content {
+    padding-bottom: 24px;
+    @include font(16,24);
+    @media #{$md-and-up} {
+    }
+    @media #{$lg-and-up} {
+      padding-bottom: 32px;
+    }
+    p {
+      margin-bottom: 12px;
+      @media #{$md-and-up} {
+        margin-bottom: 16px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__label {
+    h2 {
+      margin-right: auto;
+      @include font(16, 26);
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+      @media #{$lg-and-up} {
+        @include font(20, 28);
+      }
+    }
+  }
+  .page-content > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .page-content--column-list > ul{
+    margin-bottom: 15px;
+    @media #{$lg-and-up}{
+      column-count: 5;
+    }
+  }
+  .contact {
+    margin-bottom: 16px;
+    margin-left: 30px;
+  }
+  .page-content--column-list > ul  li{
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .page-content b {
+    margin: 0;
+    display: inline;
+  }
+  ol {
+    margin-bottom: 0;
+    padding-left: 24px;
+  }
+}

@@ -1,0 +1,183 @@
+.slider {
+  width: 100vw;
+  margin: 0 $negIndent;
+  padding: 0 $posIndent 32px;
+  @media #{$xl-and-up} {
+    width: 100%;
+    // для позиционирования кнопок сверху
+    margin: -90px 0 0;
+    padding: 90px 0 0;
+  }
+  &__wrapper {
+  }
+  &__item {
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    left: auto;
+    top: 32px;
+    color: $blue;
+    transition: background-color .3s;
+    svg {
+      transition:  fill .3s;
+      fill: currentColor;
+    }
+    &::after {
+      content: "";
+      background-image: url("../../img/icons/icon_arrow-go-big.svg");
+    }
+    @media #{$xl-and-down} {
+      display: none;
+    }
+    &--next {
+      right: 40px;
+    }
+    &--prev {
+      right: 96px;
+      .slider__btn-icon {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:hover {
+      background: $blue;
+      color: $white;
+
+    }
+  }
+  &__btn-icon {
+    width: 24px;
+    height: 16px;
+  }
+
+  &__scrollbar {
+    position: relative;
+    background: $white;
+    margin-left: 24px;
+    width: 100%;
+    @media #{$md-and-up} {
+      margin-left: calc((100vw - 704px) / 2);
+    }
+    @media #{$lg-and-up} {
+      margin-left: calc((100vw - 960px) / 2);
+    }
+    @media #{$xl-and-up} {
+      display: none;
+    }
+    &.swiper-scrollbar {
+      left: 0;
+      width: 100%;
+    }
+    .swiper-scrollbar-drag {
+      background: $blue;
+      box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+      border-radius: 24px;
+    }
+  }
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  &--actions {
+    @media #{$xl-and-up} {
+      width: calc(100% + 80px);
+      margin: -90px -40px -50px;
+      padding: 90px 40px 50px;
+    }
+    .slider {
+      &__item {
+        margin-right: 24px;
+        &:last-child {
+          margin-right: 0;
+        }
+        @media #{$xl-and-up} {
+          &:not(.swiper-slide-visible) {
+            opacity: 0;
+          }
+        }
+      }
+      &__btn {
+        @media #{$xl-and-down} {
+          display: none;
+        }
+        &--next {
+          right: 40px;
+        }
+        &--prev {
+          right: 96px;
+        }
+      }
+    }
+  }
+  &--reviews {
+    .slider {
+      &__btn {
+        display: none;
+      }
+    }
+  }
+  &--masters {
+    padding: 0 0 32px;
+    @media #{$md-and-up} {
+      padding: 0 $posIndent 32px;
+    }
+    @media #{$xl-and-up} {
+      width: calc(100% + 80px);
+      margin: -90px -40px -50px;
+      padding: 90px 40px 50px;
+    }
+    .slider {
+      &__item {
+        margin-right: 24px;
+        &:last-child {
+          margin-right: 0;
+        }
+        @media #{$xl-and-up} {
+          &:not(.swiper-slide-visible) {
+            opacity: 0;
+          }
+        }
+      }
+      &__btn {
+        @media #{$xl-and-down} {
+          display: none;
+        }
+        &--next {
+          right: 40px;
+        }
+        &--prev {
+          right: 96px;
+        }
+      }
+    }
+    .swiper-wrapper {
+      align-items: unset;
+    }
+    .swiper-slide {
+      height: unset;
+      min-height: 100%;
+    }
+  }
+  &--brands {
+    padding: 0 0 32px;
+    @media #{$md-and-up} {
+      padding: 0 $posIndent 32px;
+    }
+    @media #{$xl-and-up} {
+      width: calc(100% + 80px);
+      margin: -90px -40px -50px;
+      padding: 90px 40px 50px;
+    }
+    .slider__btn {
+      display: none;
+      @media #{$xl-and-up} {
+        display: inline-flex;
+      }
+  }
+
+  }
+}

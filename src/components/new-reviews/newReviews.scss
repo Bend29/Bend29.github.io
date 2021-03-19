@@ -1,0 +1,112 @@
+.new-reviews {
+  &__row {
+    @media #{$xl-and-up} {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__buttons {
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$md-and-up} {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  &__amount {
+    margin-bottom: 32px;
+    @media #{$xl-and-up} {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+  }
+  &__btn {
+    z-index: 2;
+    @media #{$xl-and-down} {
+      display: none;
+    }
+  }
+  &__btn-icon {
+    width: 24px;
+    height: 16px;
+    margin-left: 8px;
+    fill: currentColor;
+  }
+}
+
+.new-reviews-list {
+  &__item {
+    width: 227px;
+    margin-right: 24px;
+    @media #{$md-and-up} {
+      width: 249px;
+    }
+    @media #{$xl-and-up} {
+      width: 282px;
+    }
+  }
+}
+
+.new-reviews-amount {
+  background: $white;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(35, 100, 175, 0.2);
+  border-radius: 12px;
+  @media #{$md-and-up} {
+    padding: 24px 32px;
+    width: 496px;
+  }
+  @media #{$xl-and-up} {
+    padding: 32px;
+    width: 266px;
+  }
+  &__title {
+    color: $blue;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    @media #{$xl-and-up} {
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title-text {
+    @include font(20, 28);
+    font-weight: 600;
+    margin-left: 12px;
+    @media #{$md-and-up} {
+      @include font(26, 34);
+    }
+    @media #{$xl-and-up} {
+      @include font(20, 32);
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+  &__text {
+    @include font(14, 22);
+    @media #{$xl-and-up} {
+      @include font(16, 24);
+    }
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+}

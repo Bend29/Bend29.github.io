@@ -1,0 +1,11 @@
+.warranty-contact{
+  &__title{
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  &__text {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,40 @@
+.new-question {
+  &__wrapper {
+    width: 100%;
+    text-align: right;
+    margin: auto;
+
+    @media #{$md-and-up} {
+      width: 704px;
+    }
+    @media #{$md-and-up} {
+      width: 792px;
+    }
+
+  }
+  &__container {
+    text-align: left;
+    //padding: 48px 24px;
+    background: $white;
+    border-radius: 24px;
+    @media #{$md-and-up} {
+      //padding: 48px;
+    }
+    @media #{$lg-and-up} {
+      //padding: 56px 102px;
+    }
+  }
+  &__title.h1,
+  &__top {
+    margin-bottom: 24px;
+    @media #{$lg-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  &__text {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

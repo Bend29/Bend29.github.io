@@ -1,0 +1,41 @@
+[
+  {
+    "coordinates":[
+      55.684758,
+      37.738521
+    ],
+    "properties": {
+      "iconCaption": "ВДНХ"
+    },
+    "attribute": {
+      "preset":"islands",
+      "iconColor":"#0095b6"
+    }
+  },
+  {
+    "coordinates":[
+      55.781800,
+      37.655719
+    ],
+    "properties": {
+      "iconCaption": "ВДНХ"
+    },
+    "attribute":{
+      "preset":"islands",
+      "iconColor":"#F371D1"
+    }
+  },
+  {
+    "coordinates":[
+      55.786585,
+      37.532535
+    ],
+    "properties": {
+      "iconCaption": "ВДНХ"
+    },
+    "attribute":{
+      "preset":"islands",
+      "iconColor":"#595959"
+    }
+  }
+]

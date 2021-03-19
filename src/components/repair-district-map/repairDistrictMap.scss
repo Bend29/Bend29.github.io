@@ -1,0 +1,18 @@
+.repair-district-map {
+  margin: 0 $negIndent;
+  box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+  height: 250px;
+  background-position: center center;
+  overflow: hidden;
+  @media #{$md-and-up} {
+    height: 350px;
+  }
+  @media #{$lg-and-up} {
+    margin: 0;
+    border-radius: 24px;
+  }
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+}

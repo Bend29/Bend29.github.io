@@ -1,0 +1,65 @@
+.not-found-top {
+  &__link {
+    color: $blue;
+    border-bottom: 1px solid $light-blue;
+  }
+  &__img {
+    width: 280px;
+    height: 123px;
+    margin: 0 auto 24px auto;
+    @media #{$md-and-up} {
+      width: 430px;
+      height: 187px;
+      margin: 0 auto 33px auto;
+    }
+    @media #{$lg-and-up} {
+      width: 588px;
+      height: 257px;
+      margin: 0 auto 42px auto;
+    }
+  }
+  &__text {
+    margin-bottom: 32px;
+    & p:first-child {
+      margin-bottom: 8px;
+    }
+    @media #{$md-and-up} {
+      text-align: center;
+    }
+  }
+  &__button {
+    text-align: center;
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.not-found-top,.not-found-bottom{
+  padding: 40px 0 0 0;
+  @media #{$md-and-up} {
+    padding: 48px 0 0 0;
+  }
+  @media #{$lg-and-up} {
+    padding: 64px 0 0 0;
+  }
+}
+
+.not-found-bottom{
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  .repairs__list {
+    @media #{$lg-and-up} {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.how-call-master {
+  &__title {
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.table {
+  overflow: hidden;
+  border: 1px solid $light-blue;
+  border-radius: 24px;
+  &__item {
+    overflow: hidden;
+    padding: 0 24px;
+    border-bottom: 1px solid $light-blue;
+
+    background-color: $white;
+    &:last-child {
+      border-bottom: none;
+    }
+    @media #{$md-and-up} {
+      padding: 0 32px;
+    }
+
+    &.opened {
+      height: 100%;
+      .table__container {
+        &::before {
+          content: "";
+          display: block;
+          height: 1px;
+          background-color: $light-blue;
+          margin-left: -24px;
+          margin-right: -24px;
+          @media #{$md-and-up} {
+            margin-left: -32px;
+            margin-right: -32px;
+          }
+        }
+      }
+      .table__icon-arrow {
+        transform: rotate(-180deg);
+      }
+      .table__label {
+        @media (hover) {
+          &:hover {
+            color: $blue;
+            background-color: $light-gray;
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 24px 32px;
+          }
+        }
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 0;
+    cursor: pointer;
+    @include font(16, 26);
+    color: $black;
+    @media #{$md-and-up} {
+      padding: 24px 0;
+    }
+    @media #{$lg-and-up} {
+      @include font(20, 28);
+    }
+    span {
+      margin-right: auto;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  &__container {
+    height: 0;
+    transition: all 0.2s;
+  }
+  &__icon {
+    margin-top: -6px;
+    margin-bottom: -6px;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 50%;
+    @media #{$md-and-up} {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__icon-arrow {
+    flex-shrink: 0;
+    display: block;
+    width: 12px;
+    height: 7px;
+    fill: #2364af;
+    margin-left: 16px;
+  }
+  &--seo {
+    &:not(.opened) {
+      .table__label {
+        @media (hover) {
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+    &.opened {
+      .table__label {
+        @media (hover) {
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+    .table__item.opened,
+    .table__item:hover {
+      .table__label {
+        background-color: $white;
+      }
+    }
+    .table__item:not(.opened):hover {
+      .table__icon-arrow {
+        transform: rotate(0deg);
+      }
+    }
+    .table__item.opened .table__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

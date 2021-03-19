@@ -1,0 +1,294 @@
+.page-content {
+  max-width: 995px;
+  @include font(16, 24);
+  @media #{$md-and-up} {
+    //margin-right: -24px;
+  }
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-top: 56px;
+      margin-bottom: 40px;
+    }
+  }
+  h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+
+    @media #{$xl-and-up} {
+      margin-top: 40px;
+    }
+  }
+  h4 {
+    margin: 16px 0;
+    @media #{$xl-and-up} {
+      margin: 24px 0;
+    }
+  }
+  h5 {
+    margin: 16px 0;
+  }
+  h6 {
+    margin: 16px 0;
+  }
+  p {
+    @include font(16, 24);
+    margin: 0 0 16px 0;
+  }
+  a {
+    display: inline-block;
+    color: $blue;
+    border-bottom: 1px solid $blue;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    &:hover {
+      color: $deep-blue;
+      border-bottom-color: transparent;
+      span {
+        border-bottom-color: transparent;
+      }
+    }
+    &.link {
+      color: $black;
+      font-weight: 700;
+      border-bottom: none;
+      display: inline-block;
+      margin: 10px 0;
+      span {
+        border-bottom: 1px dashed $border-link;
+      }
+    }
+    &.js-zoom-image {
+      display: inline-block;
+      border-bottom: none;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      @media #{$md-and-up} {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+  b {
+    margin: 16px 0;
+    display: block;
+  }
+  ol {
+    margin-bottom: 32px;
+    counter-reset: item;
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        position: absolute;
+        left: 0;
+        counter-increment: item;
+        content: counter(item) ". ";
+        color: $aquamarine;
+      }
+      p {
+        color: $gray;
+      }
+    }
+  }
+  ul:not(.article-table) {
+    margin: 24px 0;
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 16px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-image: url("../../img/icons/icon_check.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        margin-right: 8px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        color: $gray;
+      }
+    }
+  }
+  .bold {
+    font-weight: 700;
+  }
+
+  img {
+    &:not(.offer-wrapper__img),
+    &:not(.offer-wrapper__img-man),
+    &:not(.offer-wrapper__sticker),
+    &:not(.offer-wrapper__sticker-small) {
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 32px 0;
+      @media #{$md-and-up} {
+        display: inline-block;
+        vertical-align: top;
+        margin: 32px 24px 32px 0;
+      }
+    }
+  }
+  &__images {
+    margin: 32px -16px 48px 0;
+    @media #{$md-and-up} {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin: 32px -24px 48px 0;
+    }
+    @media #{$md-and-up} {
+      margin: 48px -24px 56px 0;
+    }
+    > img {
+      &:not(.offer-wrapper__img),
+      &:not(.offer-wrapper__img-man),
+      &:not(.offer-wrapper__sticker),
+      &:not(.offer-wrapper__sticker-small) {
+        margin: 0 16px 16px 0;
+        @media #{$md-and-up} {
+          max-width: calc(50% - 24px);
+          margin: 0 24px 24px 0;
+        }
+      }
+    }
+    a.js-zoom-image {
+      margin: 0 16px 16px 0;
+      @media #{$md-and-up} {
+        max-width: calc(50% - 24px);
+        margin: 0 24px 24px 0;
+      }
+      img {
+        margin: 0;
+      }
+    }
+  }
+  &__gallery {
+    margin: 32px -16px 48px 0;
+    @media #{$md-and-up} {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin: 32px -24px 48px 0;
+    }
+    @media #{$md-and-up} {
+      margin: 48px -24px 56px 0;
+    }
+    a.js-zoom-image {
+      margin: 0 16px 16px 0;
+      @media #{$md-and-up} {
+        width: calc(100% / 3 - 24px);
+        margin: 0 24px 24px 0;
+      }
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  &--column-list {
+    ul {
+      @media #{$md-and-up} {
+        column-count: 2;
+      }
+      @media #{$lg-and-up} {
+        column-count: 3;
+      }
+      li {
+        margin-right: 16px;
+      }
+    }
+  }
+  &--table {
+    margin-right: 0;
+
+    img {
+      &:not(.offer-wrapper__img),
+      &:not(.offer-wrapper__img-man),
+      &:not(.offer-wrapper__sticker),
+      &:not(.offer-wrapper__sticker-small) {
+        max-width: 100%;
+        margin: 0 0 16px 0;
+      }
+    }
+    p {
+      margin-top: 0;
+    }
+    b {
+      margin-top: 0;
+    }
+    a {
+      display: inline-block;
+      color: $blue;
+      border-bottom: none;
+      transition: color 0.2s, border-bottom-color 0.2s;
+      span {
+        border-bottom: 1px solid $border-link;
+      }
+      &:hover {
+        color: $deep-blue;
+        border-bottom-color: transparent;
+
+        span {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  &--repair-detail {
+    .page-content {
+      &__images {
+        > img {
+          &:not(.offer-wrapper__img),
+          &:not(.offer-wrapper__img-man),
+          &:not(.offer-wrapper__sticker),
+          &:not(.offer-wrapper__sticker-small) {
+            height: 184px;
+            max-width: 100%;
+            object-fit: cover;
+            @media #{$md-and-up} {
+              width: calc((100% / 3) - 24px);
+              height: 132px;
+            }
+            @media #{$lg-and-up} {
+              height: 190px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &--full {
+    max-width: 100%;
+  }
+}
+.note {
+  @include font(16, 24);
+  color: $gray;
+  & span {
+    color: $gray;
+  }
+}
+.link-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+}

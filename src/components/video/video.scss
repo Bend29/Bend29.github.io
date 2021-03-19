@@ -1,0 +1,28 @@
+.video {
+  &__title {
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__iframe {
+    width: 100%;
+    height: auto;
+    min-height: 175px;
+    max-width: 360px;
+    @media #{$md-and-up} {
+      width: 704px;
+      max-width: unset;
+      min-height: 396px;
+      max-height: 396px;
+    }
+    @media #{$xl-and-up} {
+      width: 993px;
+      min-height: 558px;
+      max-height: 558px;
+    }
+  }
+}

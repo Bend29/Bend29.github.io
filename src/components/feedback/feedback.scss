@@ -1,0 +1,67 @@
+.feedback-top {
+  &__content {
+    max-width: 100%;
+  }
+  &__wrapper{
+    height: auto;
+    overflow: auto;
+    @media #{$lg-and-up} {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  & .top-page__right , & .top-page__row {
+    width: 100%;
+  }
+}
+.percentage-reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 312px;
+  margin-top: 24px;
+  padding: 23px 26px;
+  border: 1px solid $light-blue;
+  border-radius: 12px;
+  background-color: $white;
+  @media #{$md-and-up} {
+    max-width: 546px;
+    padding: 23px 35px;
+  }
+  @media #{$lg-and-up} {
+    margin-top: 0;
+    max-width: 384px;
+    padding: 20px 35px;
+  }
+  &__icon {
+    display: block;
+   flex-shrink: 0;
+    margin-right: 23px;
+    width: 48px;
+    height: 48px;
+    @media #{$md-and-up} {
+      width: 56px;
+      height: 56px;
+    }
+  }
+ &__percentage {
+   margin-right: 8px;
+   width: 76px;
+   @include font(40,50);
+   font-weight: 700;
+   @media #{$lg-and-up} {
+     width: auto;
+   }
+ }
+  &__text {
+    @include font(14,22);
+    font-weight: 600;
+    @media #{$md-and-up} {
+      @include font(24,34);
+    }
+    @media #{$lg-and-up} {
+      @include font(20,32);
+    }
+  }
+}

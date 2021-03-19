@@ -1,0 +1,21 @@
+<%= _.template(require('../components/head/head.html').default)(data) %> <%= _.template(require('../components/header/header.html').default)(data) %>
+<!--CONTENT -->
+<main class="main main--gray-bg ">
+  <div class="section section--radius-top ">
+    <div class="section__inner"><%= _.template(require('../components/feedback-detail-review/feedbackDetailReview.html').default)(data) %></div>
+  </div>
+
+  <div class="section section--white  section--last">
+    <div class="section__inner"><%= _.template(require('../components/feedback-reviews/feedbackReviews.html').default)(data) %></div>
+  </div>
+  <div class="display-none">
+    <%= _.template(require('../components/callback-popup/callbackPopup.html').default)(data) %> <%=
+    _.template(require('../components/callback-popup-msg/callbackPopupMsg.html').default)(data) %>
+    <%= _.template(require('../components/query-repairs-popup/queryRepairsPopup.html').default)(data) %>
+    <%= _.template(require('../components/query-repairs-popup-msg/queryRepairsPopupMsg.html').default)(data) %>
+
+
+  </div>
+</main>
+
+<%= _.template(require('../components/footer/footer.html').default)(data) %>

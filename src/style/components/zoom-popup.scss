@@ -1,0 +1,212 @@
+.zoom-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  z-index: 22;
+  cursor: default;
+  &__wrapper {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: transparent;
+    @media #{$md-and-up} {
+      max-width: 85%;
+    }
+  }
+  &.mfp-bg {
+    background: rgba(20, 44, 54, 0.7);
+  }
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: auto;
+    top: 32px;
+    color: $blue;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    svg {
+      width: 20px;
+      height: 16px;
+      transition: fill 0.3s;
+      fill: currentColor;
+    }
+  }
+  &__counter {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transform: translateY(-100%);
+    color: $white;
+    @include font(14, 22);
+    opacity: 0;
+    padding-left: 16px;
+    @media #{$md-and-up} {
+      padding-left: 0;
+    }
+  }
+
+  .mfp-arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    @media #{$md-and-up} {
+      width: 64px;
+      height: 100%;
+    }
+    @media #{$lg-and-up} {
+      width: 80px;
+    }
+    &-left {
+      left: 0;
+      transform: rotate(-180deg);
+    }
+  }
+  .mfp-close {
+    position: absolute;
+    right: -8px;
+    top: 40px;
+    transform: translateY(-100%);
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: $white;
+    opacity: 0;
+    &:hover {
+      color: $orange;
+    }
+  }
+  /* CSS-based preloader */
+  .mfp-preloader {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/icons/icon_loader.svg");
+      background-repeat: no-repeat;
+      background-position: center right;
+      animation: rotate 1.2s infinite linear;
+    }
+  }
+
+  &__icon-close {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  .mfp-container {
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mfp-image-holder,
+  .mfp-iframe-holder {
+    .mfp-content {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: transparent;
+      width: 100%;
+    }
+
+    .mfp-figure {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .mfp-bottom-bar {
+      position: relative;
+    }
+
+    .mfp-title {
+      text-align: left;
+      padding: 0;
+      color: $black;
+      font-weight: 400;
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 28px;
+      @media #{$md-and-up} {
+        text-align: center;
+      }
+      @media #{$lg-and-up} {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+
+    .mfp-img {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      max-height: 72vh !important;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 0;
+      position: relative;
+      cursor: default;
+    }
+  }
+
+  &.mfp-image-loaded {
+    .mfp-preloader {
+      display: none;
+    }
+    .mfp-close {
+      opacity: 1;
+    }
+    .zoom-popup__counter {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

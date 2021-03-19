@@ -1,0 +1,26 @@
+<%= _.template(require('../components/head/head.html').default)(data) %> <%= _.template(require('../components/header/header.html').default)(data) %>
+<!--CONTENT -->
+<main class="main main--gray-bg">
+  <div class="section section--radius-top">
+    <div class="section__inner"><%= _.template(require('../components/top-warranty-case/topWarrantyCase.html').default)(data) %></div>
+  </div>
+  <div class="section ">
+    <div class="section__inner"><%= _.template(require('../components/call-master-guarantee/callMasterGuarantee.html').default)(data) %></div>
+  </div>
+  <div class="section ">
+    <div class="section__inner"><%= _.template(require('../components/warranty-contact/warrantyContact.html').default)(data) %></div>
+  </div>
+  <div class="section section--last ">
+    <div class="section__inner"><%= _.template(require('../components/warranty-questions/warrantyQuestions.html').default)(data) %></div>
+  </div>
+  <div class="display-none">
+    <%= _.template(require('../components/callback-popup/callbackPopup.html').default)(data) %>
+    <%= _.template(require('../components/callback-popup-msg/callbackPopupMsg.html').default)(data) %>
+    <%= _.template(require('../components/query-repairs-popup/queryRepairsPopup.html').default)(data) %>
+    <%= _.template(require('../components/query-repairs-popup-msg/queryRepairsPopupMsg.html').default)(data) %>
+    <%= _.template(require('../components/warranty-case-popup/warrantyCasePopup.html').default)(data) %>
+    <%= _.template(require('../components/warranty-case-popup-msg/warrantyCasePopupMsg.html').default)(data) %>
+
+  </div>
+</main>
+<%= _.template(require('../components/footer/footer.html').default)(data) %>

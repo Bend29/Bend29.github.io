@@ -1,0 +1,17 @@
+.feedback-detail-reviews{
+  &__title.h2 {
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  &__review {
+
+  }
+  &__answer {
+    padding-left: 17px;
+    .comments-list__item > .comments-list  {
+        padding-left: 0;
+    }
+  }
+}

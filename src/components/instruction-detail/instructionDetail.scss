@@ -1,0 +1,110 @@
+.instruction-detail {
+  &__title {
+    margin-bottom: 24px;
+    display: none;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+      display: block;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    width: 100vw;
+    margin: 32px $negIndent 0;
+    @media #{$md-and-up} {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.instruction-detail-item {
+  border: 1px solid $light-blue;
+  padding: 18px 24px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  background: $white;
+  &:first-child {
+    border-radius: 40px 40px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 40px 40px;
+  }
+  &:first-child:last-child {
+    border-radius: 40px;
+  }
+  @media #{$md-and-up} {
+    padding: 0;
+  }
+  @media #{$lg-and-up} {
+  }
+  &__label {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:after {
+      display: none;
+    }
+    @media #{$md-and-up} {
+      display: none;
+    }
+  }
+  &__container {
+    @media #{$md-and-up} {
+      overflow: visible;
+      height: 100% !important;
+    }
+  }
+  &__label-icon {
+    @media #{$md-and-up} {
+      display: none;
+    }
+  }
+}
+
+.instruction-table {
+  margin-top: 24px;
+  @media #{$md-and-up} {
+    margin-top: 0;
+  }
+  &__item {
+    margin-bottom: 24px;
+    padding: 0 0 0 16px;
+    @media #{$md-and-up} {
+      padding: 24px 32px;
+      margin-bottom: 0;
+      border-bottom: 1px solid $light-blue;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__row {
+    @media #{$md-and-up} {
+      display: flex;
+
+    }
+  }
+  &__name {
+    color: $gray;
+    @include font(14, 22);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    @media #{$md-and-up} {
+      width: calc(50% - 24px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    @include font(16, 24);
+    margin-bottom: 16px;
+    @media #{$md-and-up} {
+      width: calc(50% - 24px);
+      margin-bottom: 0;
+    }
+  }
+}

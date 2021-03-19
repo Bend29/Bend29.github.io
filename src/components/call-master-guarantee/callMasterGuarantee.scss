@@ -1,0 +1,42 @@
+.call-master-guarantee {
+  &__decorate-insert {
+    opacity: 0.2;
+  }
+  &__item {
+    @media #{$xl-and-up} {
+      padding-bottom: 64px;
+    }
+  }
+  &__label {
+    padding-bottom: 0;
+    border-bottom: none;
+    &:hover {
+      cursor:default;
+    }
+  }
+  &__container {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+.call-master-guarantee-list {
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  &__item {
+    @media #{$md-and-up} {
+      width: 33.3%;
+    }
+    &:nth-last-child(2){
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &__item-btn {
+    width: 100%;
+    text-align: center;
+
+  }
+
+}

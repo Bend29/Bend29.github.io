@@ -1,0 +1,118 @@
+.write-comment {
+  &__top {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+    @media #{$md-and-up} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__row {
+    display: inline-flex;
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__row-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media #{$md-and-up} {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .write-comment__btn {
+      margin-top: 24px;
+      @media #{$md-and-up} {
+        margin-top: 0;
+      }
+    }
+  }
+  &__btn {
+    flex-shrink: 0;
+  }
+  &__views {
+    margin-right: 24px;
+  }
+}
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+  @media #{$lg-and-up} {
+    width: 790px;
+  }
+}
+.comments-button-wrapper {
+  border-top: 1px solid $light-blue;
+  padding-top: 32px;
+  text-align: center;
+}
+.comments-button {
+  display: block;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  @include font(16, 24);
+  color: $blue;
+  &__icon {
+    width: 12px;
+    height: 7px;
+    margin-left: 12px;
+    fill: currentColor;
+  }
+  &:hover {
+    color: $deep-blue;
+  }
+}
+.comments-list {
+  &__item {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    margin-top: 40px;
+
+    .comments-list {
+      padding-left: 17px;
+
+      &__item {
+        margin-top: 40px;
+
+        .comments-list {
+          padding-left: 0;
+          @media #{$lg-and-up} {
+            padding-left: 17px;
+          }
+        }
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__item > .comments-list {
+    padding-right: 17px;
+  }
+
+  &__item .comments-list .comments-item .comments-list {
+    padding-left: 0;
+    @media #{$lg-and-up} {
+      padding-left: 17px;
+    }
+
+    &__item .comments-list .comments-item .comments-list .comments-item .comments-list {
+      padding-left: 0;
+    }
+  }
+}

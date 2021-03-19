@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="container-small">
+    <div class="new-question">
+      <div class="new-question__container js-review-tabs">
+        <div class="new-question__top">
+          <div class="new-question__title h1">Заявка на ремонт</div>
+          <p class="new-question__text">Отправляя заявку онлайн, вы получаете скидку 10% на работу мастера</p>
+        </div>
+        <div class="form form--query-repairs form--new-question">
+          <form>
+            <div class="form__item">
+              <label class="form__label required">
+                <span>Ваше имя</span>
+                <input type="text" class="form__input" required />
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+            </div>
+            <div class="form__item">
+              <label class="form__label required">
+                <span>Ваш телефон</span>
+                <input type="text" class="form__input js-phone" required />
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+              <div class="form__note">Чтобы мы могли с вами связаться</div>
+            </div>
+            <div class="form__row">
+              <div class="form__item">
+                <div class="form__dropdown dropdown js-dropdown-parent">
+                  <label class="form__label" for="14"> <span>Тип техники</span></label>
+                  <select id="14" class="js-dropdown" name="type" data-placeholder="Выберите">
+                    <option value selected disabled>Выберите</option>
+                    <option value="1">Холодильник</option>
+                    <option value="3">Стиральная машина</option>
+                    <option value="4">Посудомоечная машина</option>
+                    <option value="4">Электроплита</option>
+                    <option value="4">Газовая плита</option>
+                    <option value="4">Кофемашина</option>
+                    <option value="4">Телевизор</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form__dropdown dropdown dropdown--search js-search-parent">
+                  <label class="form__label" for="15"><span>Марка техники</span></label>
+                  <select id="15" class="js-search" name="type" data-placeholder="Начните вводить название">
+                    <option value selected>Начните вводить название</option>
+                    <option value="1">Candy</option>
+                    <option value="3">Саратов</option>
+                    <option value="4">Ariston</option>
+                    <option value="4">LG</option>
+                    <option value="4">Bosch</option>
+                    <option value="4">Samsung</option>
+                    <option value="4">Sanyo</option>
+                    <option value="4">Ariston</option>
+                    <option value="4">LG</option>
+                    <option value="4">Bosch</option>
+                    <option value="4">Samsung</option>
+                    <option value="4">Sanyo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__item">
+              <label class="form__label">
+                <span>Описание неисправности</span>
+                <textarea class="form__input form__input--textarea"></textarea>
+                <span class="form__prompt">Тект ошибки</span>
+              </label>
+            </div>
+            <div class="form__buttons">
+              <a href="#query-repairs-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+              <div class="form__note">
+                Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

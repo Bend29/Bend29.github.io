@@ -1,0 +1,30 @@
+.readmore {
+  &__wrapper{
+    transition: height 0.3s;
+      &.active + .readmore__buttons {
+        .readmore__button {
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: inline-block;
+          }
+        }
+      }
+  }
+  &__buttons {
+    display: flex;
+    &.hide {
+      display: none;
+    }
+  }
+  &__button {
+    &:first-child {
+      display: inline-block;
+    }
+    &:last-child {
+      display: none;
+    }
+
+  }
+}

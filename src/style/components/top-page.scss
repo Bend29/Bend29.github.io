@@ -1,0 +1,177 @@
+.top-page {
+  padding-top: 32px;
+
+  @media #{$xl-and-up} {
+    padding-top: 40px;
+  }
+  &__row {
+    @media #{$md-and-up} {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+  h1 {
+    margin-bottom: 24px;
+    @media #{$xl-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    @media #{$xl-and-up} {
+      margin-bottom: 32px;
+      margin-top: 56px;
+    }
+  }
+  &__brand-image {
+    width: 144px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+    @media #{$md-and-up} {
+      width: 158px;
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+    @media #{$xl-and-up} {
+      width: 164px;
+      margin-right: 40px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__wrapper {
+    height: 118px;
+    min-height: 118px;
+    overflow: hidden;
+    transition: height 0.3s;
+    @media #{$md-and-up} {
+      min-height: auto;
+      height: auto;
+      overflow: visible;
+    }
+  }
+  &__sub-title {
+    margin-bottom: 16px;
+    @media #{$md-and-up} {
+      margin-bottom: 14px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    @include font(16, 24);
+    margin-bottom: 16px;
+    @media #{$xl-and-up} {
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+      transition: border-bottom-color 0.2s;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+   &--gray {
+     color: $gray;
+   }
+  }
+  &__text-bold {
+    font-weight: 600;
+  }
+  &__instruction-link {
+    margin: 32px 0;
+    max-width: 462px;
+  }
+  &__buttons {
+    margin-top: 24px;
+    @media #{$md-and-up} {
+      display: none;
+    }
+  }
+  &__button {
+    margin-top: 32px;
+    text-align: center;
+    @media #{$md-and-up} {
+      text-align: left;
+    }
+  }
+  &__content {
+    max-width: 995px;
+  }
+  &__help-result {
+    margin-bottom: 32px;
+  }
+  &--appliances {
+    .top-page {
+      &__content {
+        margin-bottom: 40px;
+        @media #{$xl-and-up} {
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+  &--not-spoiler {
+    .top-page {
+      &__wrapper {
+        height: auto;
+        max-height: available;
+        overflow: visible;
+      }
+    }
+  }
+  &--questions {
+    .top-page {
+      &__row {
+        display: block;
+        @media #{$lg-and-up} {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+  &--instruction-detail {
+    .top-page {
+      &__image {
+        width: auto;
+        height: 310px;
+        flex-shrink: 0;
+        margin-bottom: 24px;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+
+        @media #{$md-and-up} {
+          height: 340px;
+          margin-bottom: 0;
+          margin-right: 24px;
+        }
+        @media #{$lg-and-up} {
+          height: 353px;
+          margin-right: 40px;
+        }
+      }
+      &__wrapper {
+        height: auto;
+        min-height:unset;
+        overflow: visible;
+      }
+
+    }
+  }
+}

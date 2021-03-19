@@ -1,0 +1,36 @@
+.warning {
+  width: 100vw;
+  background: $light-blue;
+  padding: 8px 0;
+  @media #{$md-and-up} {
+    padding: 12px 0;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__text {
+    @include font(14,22);
+    width: 85%;
+    @media #{$md-and-up} {
+      width: auto;
+      padding-right: 48px;
+    }
+    @media #{$xl-and-up} {
+      text-align: center;
+    }
+  }
+  .link {
+    color: $blue;
+    border-bottom: $border-link;
+  }
+  &__close {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $blue;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}

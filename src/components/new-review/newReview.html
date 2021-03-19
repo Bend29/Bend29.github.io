@@ -1,0 +1,218 @@
+<div class="container">
+  <div class="container-small">
+    <div class="new-question">
+      <div class="new-question__container js-review-tabs">
+        <div class="new-question__top">
+          <div class="new-question__title h1">Оставить отзыв</div>
+          <p class="new-question__text">Ваш отзыв появится на сайте в течение часа. После публикации мы пришлём вам ссылку на указанный e-mail.</p>
+        </div>
+        <div class="form form--new-question">
+          <div class="form__item">
+            <div class="form__label"><span>Про что оставляете отзыв?</span></div>
+            <div class="form__tabs-buttons">
+              <a href="#review-1" class="form__tabs-btn js-review-tab-btn">Ремонт на дому</a>
+              <a href="#review-2" class="form__tabs-btn js-review-tab-btn">Советы в блоге</a>
+            </div>
+          </div>
+          <div class="form__rating hidden js-tab-form-rating">
+            <div class="rating-form-wrapper">
+              <div class="rating-form-wrapper__row">
+                <div class="rating-form-wrapper__text">Оценка</div>
+                <div class="rating-form js-rating-form">
+                  <input type="radio" id="star-5" name="rating" value="1" class="js-rating-input" />
+                  <label for="star-5" title="Оценка «5»" class="rating-form__label js-rating-label">
+                    <svg class="rating-form__icon">
+                      <use xlink:href="img/icons.svg#icon_fill-star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star-4" name="rating" value="2" class="js-rating-input" />
+                  <label for="star-4" title="Оценка «4»" class="rating-form__label js-rating-label">
+                    <svg class="rating-form__icon">
+                      <use xlink:href="img/icons.svg#icon_fill-star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star-3" name="rating" value="3" class="js-rating-input" />
+                  <label for="star-3" title="Оценка «3»" class="rating-form__label js-rating-label">
+                    <svg class="rating-form__icon">
+                      <use xlink:href="img/icons.svg#icon_fill-star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star-2" name="rating" value="4" class="js-rating-input" />
+                  <label for="star-2" title="Оценка «2»" class="rating-form__label js-rating-label">
+                    <svg class="rating-form__icon">
+                      <use xlink:href="img/icons.svg#icon_fill-star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star-1" name="rating" value="5" class="js-rating-input" />
+                  <label for="star-1" title="Оценка «1»" class="rating-form__label js-rating-label">
+                    <svg class="rating-form__icon">
+                      <use xlink:href="img/icons.svg#icon_fill-star"></use>
+                    </svg>
+                  </label>
+                  <div class="rating-form__tooltip js-rating-tooltip">Спасибо за&nbsp;вашу оценку!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="review-1" class="js-review-tab tab">
+            <div class="form form--query-repairs">
+              <form>
+                <div class="form__row">
+                  <div class="form__item">
+                    <div class="form__dropdown dropdown js-dropdown-parent">
+                      <label class="form__label" for="technical-10"> <span>Что чинили</span></label>
+                      <select id="technical-10" class="js-dropdown" name="type" data-placeholder="Выберите">
+                        <option value selected disabled>Выберите тип техники</option>
+                        <option value="1">Холодильник</option>
+                        <option value="3">Стиральная машина</option>
+                        <option value="4">Посудомоечная машина</option>
+                        <option value="4">Электроплита</option>
+                        <option value="4">Газовая плита</option>
+                        <option value="4">Кофемашина</option>
+                        <option value="4">Телевизор</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__dropdown dropdown dropdown--search js-search-parent">
+                      <label class="form__label" for="where-20"><span>Где чинили</span></label>
+                      <select id="where-20" class="js-search" name="type" data-placeholder="Населённый пункт">
+                        <option value selected>Начните вводить название</option>
+                        <option value="1">Candy</option>
+                        <option value="3">Саратов</option>
+                        <option value="4">Ariston</option>
+                        <option value="4">LG</option>
+                        <option value="4">Bosch</option>
+                        <option value="4">Samsung</option>
+                        <option value="4">Sanyo</option>
+                        <option value="4">Ariston</option>
+                        <option value="4">LG</option>
+                        <option value="4">Bosch</option>
+                        <option value="4">Samsung</option>
+                        <option value="4">Sanyo</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__dropdown dropdown js-dropdown-parent">
+                      <label class="form__label" for="master-10"> <span>Имя мастера, если помните</span></label>
+                      <select id="master-10" class="js-dropdown" name="type" data-placeholder="Выберите">
+                        <option value selected disabled>Выберите</option>
+                        <option value="1">Холодильник</option>
+                        <option value="3">Стиральная машина</option>
+                        <option value="4">Посудомоечная машина</option>
+                        <option value="4">Электроплита</option>
+                        <option value="4">Газовая плита</option>
+                        <option value="4">Кофемашина</option>
+                        <option value="4">Телевизор</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label class="form__label required">
+                    <span>Отзыв</span>
+                    <textarea
+                      class="form__input form__input--textarea form__input--double-height"
+                      placeholder="Пожалуйста, напишите ваши впечатления о нашей работе. Нам важно ваше мнение."
+                      required
+                    ></textarea>
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label required">
+                    <span>Ваше имя</span>
+                    <input type="text" class="form__input" required />
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item has-error">
+                  <label class="form__label required">
+                    <span>Ваш e-mail</span>
+                    <input type="email" class="form__input" required />
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label">
+                    <span>Ваш телефон</span>
+                    <input type="text" class="form__input js-phone" />
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                  <div class="form__note">Для связи со службой контроля качества (при необходимости)</div>
+                </div>
+                <div class="form__item">
+                  <div class="dropzone">
+                    <div class="dropzone_preview"></div>
+                    <button type="button" class="btn btn--border dz-message dropzone__button-add" data-dz-message>
+                      <svg class="btn__btn-icon">
+                        <use xlink:href="./img/icons.svg#icon_clip"></use>
+                      </svg>
+                      <span>Прикрепить фото/видео</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form__buttons">
+                  <a href="#review-popup-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+                  <div class="form__note">
+                    Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="review-2" class="js-review-tab tab">
+            <div class="form form--query-repairs">
+              <form>
+                <div class="form__item">
+                  <label class="form__label required">
+                    <span>Отзыв</span>
+                    <textarea
+                      class="form__input form__input--textarea form__input--double-height"
+                      placeholder="Пожалуйста, напишите ваши впечатления о нашей работе. Нам важно ваше мнение."
+                      required
+                    ></textarea>
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label required">
+                    <span>Ваше имя</span>
+                    <input type="text" class="form__input" required />
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label required">
+                    <span>Ваш e-mail</span>
+                    <input type="email" class="form__input" required />
+                    <span class="form__prompt">Тект ошибки</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <div class="dropzone">
+                    <div class="dropzone_preview"></div>
+                    <button type="button" class="btn btn--border dz-message dropzone__button-add" data-dz-message>
+                      <svg class="btn__btn-icon">
+                        <use xlink:href="./img/icons.svg#icon_clip"></use>
+                      </svg>
+                      <span>Прикрепить фото/видео</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="form__buttons">
+                  <a href="#review-popup-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+                  <div class="form__note">
+                    Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

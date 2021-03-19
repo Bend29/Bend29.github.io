@@ -1,0 +1,30 @@
+.repair-district-top {
+  .top-page {
+    margin-bottom: 40px;
+    @media #{$lg-and-up} {
+      margin-bottom: 48px;
+    }
+  }
+  &__wrapper {
+    min-height:  140px;
+    height: 140px;
+    overflow: hidden;
+    @media #{$md-and-up} {
+      min-height:  108px;
+      height: 108px;
+    }
+    @media #{$lg-and-up} {
+      min-height: 120px;
+      height: 120px;
+    }
+  }
+  &__buttons{
+    display: block;
+  }
+  &__repairs {
+    .repairs__link {
+      padding: 16px 24px;
+    }
+  }
+
+}

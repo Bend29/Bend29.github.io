@@ -1,0 +1,48 @@
+<div id="warranty-case-popup" class="pop-up js-pop-up">
+  <div class="pop-up__wrapper">
+    <button type="button" class="pop-up__btn-close js-pop-up-close mfp-close">
+      <svg class="pop-up__icon-close">
+        <use xlink:href="./img/icons.svg#icon_close"></use>
+      </svg>
+    </button>
+    <div class="pop-up__container">
+      <div class="pop-up__top">
+        <div class="pop-up__title h1">заявка на гарантийный случай</div>
+        <p class="pop-up__text"><b>Вводите именно те контактные данные, которые вы указывали в заказе на ремонт.</b></p>
+        <p class="pop-up__text">Менеджер найдёт ваш заказ в базе и перезвонит вам в течение часа.</p>
+      </div>
+      <div class="form form--query-repairs">
+        <form>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Ваше имя</span>
+              <input type="text" class="form__input" required />
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+          </div>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Ваш телефон</span>
+              <input type="text" class="form__input js-phone" required />
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+            <div class="form__note">Чтобы мы могли с вами связаться</div>
+          </div>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Адрес, по которому производился ремонт</span>
+              <textarea class="form__input form__input--textarea" required></textarea>
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+          </div>
+          <div class="form__buttons">
+            <a href="#warranty-case-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+            <div class="form__note">
+              Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

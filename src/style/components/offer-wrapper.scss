@@ -1,0 +1,654 @@
+.offer-wrapper {
+  font-family: $font;
+  color: $white;
+  @media #{$md-and-up} {
+    overflow: hidden;
+  }
+  &__img {
+    flex-shrink: 0;
+    align-self: flex-end;
+    @media #{$md-and-up} {
+      position: relative;
+      width: 252px;
+      bottom: -32px;
+      right: 18px;
+    }
+    @media #{$lg-and-up} {
+      bottom: -68px;
+      width: 311px;
+    }
+    @media #{$xl-and-up} {
+      width: 311px;
+    }
+    img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+    &-tech {
+      position: absolute;
+    }
+    &-man {
+      position: absolute;
+      width: 151px;
+      height: 171px;
+      bottom: -1px;
+      right: 50px;
+      z-index: 1;
+      @media #{$md-and-up} {
+        width: 173px;
+        height: 227px;
+        right: -9px;
+      }
+      @media #{$lg-and-up} {
+        right: -15px;
+      }
+      @media #{$xl-and-up} {
+        width: 290px;
+        height: 371px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    @include font(16, 26);
+    font-weight: 500;
+    text-transform: uppercase;
+    @media #{$md-and-up} {
+      @include font(26, 34);
+
+      margin-bottom: 16px;
+      text-transform: none;
+    }
+    @media #{$xl-and-up} {
+      @include font(32, 42);
+    }
+  }
+
+  &__text {
+    @include font(14, 22);
+    padding-right: 40px;
+    margin-bottom: 82px;
+    z-index: 2;
+    position: relative;
+    @media #{$md-and-up} {
+      margin-bottom: 20px;
+      @include font(16, 24);
+    }
+    p {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    @media #{$md-and-up} {
+      width: auto;
+      min-width: 305px;
+    }
+  }
+  &__right {
+  }
+
+  &__inner {
+    background: $black;
+    position: relative;
+    overflow: visible;
+    width: 100vw;
+    margin: 0 $negIndent;
+    padding: 0 $posIndent;
+    min-height: 238px;
+    @media #{$md-and-up} {
+      display: flex;
+      align-items: center;
+      padding: 32px $posIndent;
+      overflow: hidden;
+      min-height: 276px;
+    }
+    @media #{$lg-and-up} {
+      padding: 32px calc((100vw - 100%) / 2 + 110px);
+    }
+    @media #{$xl-and-up} {
+      padding: 56px $posIndent;
+      min-height: 394px;
+    }
+  }
+  &__bottom {
+    display: none;
+    @media #{$xl-and-up} {
+      display: block;
+    }
+  }
+  &__bottom-mobile {
+    display: none;
+    @media #{$xl-and-down} {
+      display: block;
+    }
+  }
+  &--call-now {
+    overflow: visible;
+    @media #{$md-and-down} {
+      padding-top: 241px;
+      text-align: center;
+    }
+    .offer-wrapper {
+      &__img {
+        width: 360px;
+        min-height: 241px;
+        top: 0;
+        left: 50%;
+        overflow-y: hidden;
+        transform: translate(-50%, -100%);
+        position: absolute;
+        flex-shrink: 0;
+        @media #{$md-and-up} {
+          position: relative;
+          overflow: visible;
+          min-height: 174px;
+          bottom: -32px;
+          width: 340px;
+          top: auto;
+          left: auto;
+          right: 30px;
+          transform: unset;
+        }
+        @media #{$lg-and-up} {
+          bottom: -42px;
+          width: 311px;
+        }
+        @media #{$xl-and-up} {
+          bottom: -70px;
+          width: 500px;
+        }
+      }
+      &__right {
+        @media #{$md-and-up} {
+          margin-left: 12px;
+        }
+        @media #{$xl-and-up} {
+          margin-left: 64px;
+        }
+      }
+      &__text {
+        padding-right: 0;
+        @include font(14, 22);
+        margin-bottom: 24px;
+        @media #{$md-and-up} {
+          @include font(16, 24);
+        }
+        @media #{$xl-and-up} {
+          @include font(20, 32);
+          margin-bottom: 40px;
+        }
+      }
+      &__right {
+        @media #{$md-and-down} {
+          padding: 32px 0;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      &__title {
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        @media #{$md-and-up} {
+          margin-bottom: 24px;
+          text-transform: unset;
+        }
+        @media #{$xl-and-up} {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+  &__button-submit {
+    margin-left: -47px;
+    .btn {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+  &--calculate {
+    padding: 32px 16px;
+    border-radius: 24px;
+    background: $white;
+    color: $black;
+    filter: drop-shadow(0px 4px 12px rgba(35, 100, 175, 0.2));
+    @media #{$md-and-up} {
+      display: flex;
+      align-items: center;
+      padding-right: 32px;
+      margin-bottom: 28px;
+    }
+    @media #{$xl-and-up} {
+      padding: 40px 48px;
+    }
+    .offer-wrapper {
+      &__img {
+        position: static;
+        width: auto;
+        max-width: 100%;
+        height: 112px;
+        margin-bottom: 16px;
+        background-image: url("../../img/picture/calculator.png");
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        @media #{$md-and-up} {
+          width: 249px;
+          height: 188px;
+          margin-bottom: 0;
+          margin-right: 32px;
+          background-position: 0 50%;
+        }
+        @media #{$xl-and-up} {
+          width: 394px;
+          height: 193px;
+          margin-right: 26px;
+        }
+        img {
+          position: static;
+          height: 100%;
+          width: auto;
+          margin: 0 auto;
+          display: block;
+          @media #{$md-and-up} {
+            width: 100%;
+            height: auto;
+            margin: auto 0;
+          }
+        }
+      }
+      &__text {
+        margin-bottom: 24px;
+        padding-right: 0;
+        @media #{$md-and-up} {
+          margin-bottom: 32px;
+        }
+      }
+      &__button {
+        @media #{$md-and-up} {
+          width: auto;
+          min-width: 305px;
+        }
+      }
+      &__button-wrapper {
+        display: flex;
+        justify-content: center;
+        @media #{$md-and-up} {
+          justify-content: flex-start;
+        }
+      }
+      &__title {
+        margin-bottom: 8px;
+        @include font(16, 26);
+        font-weight: 600;
+        text-transform: uppercase;
+        @media #{$md-and-up} {
+          margin-bottom: 16px;
+        }
+        @media #{$xl-and-up} {
+          text-transform: none;
+          @include font(32, 42);
+        }
+      }
+    }
+  }
+  &--sale {
+    overflow: visible;
+    @media #{$md-and-down} {
+      padding-top: 241px;
+      text-align: center;
+    }
+    .offer-wrapper {
+      &__img {
+        width: 360px;
+        min-height: 241px;
+        top: 0;
+        left: 50%;
+        overflow-y: hidden;
+        transform: translate(-50%, -100%);
+        position: absolute;
+        flex-shrink: 0;
+        @media #{$md-and-up} {
+          position: relative;
+          overflow: visible;
+          min-height: 174px;
+          bottom: -32px;
+          width: 340px;
+          top: auto;
+          left: auto;
+          right: 30px;
+          transform: unset;
+        }
+        @media #{$lg-and-up} {
+          bottom: -42px;
+          width: 311px;
+        }
+        @media #{$xl-and-up} {
+          bottom: -70px;
+          width: 500px;
+        }
+      }
+      &__right {
+        @media #{$md-and-up} {
+          margin-left: 12px;
+        }
+        @media #{$xl-and-up} {
+          margin-left: 64px;
+        }
+      }
+      &__text {
+        padding-right: 0;
+        @include font(14, 22);
+        margin-bottom: 24px;
+        @media #{$md-and-up} {
+          @include font(16, 24);
+        }
+        @media #{$xl-and-up} {
+          @include font(20, 32);
+          margin-bottom: 32px;
+          padding-right: 140px;
+        }
+      }
+      &__right {
+        @media #{$md-and-down} {
+          padding: 32px 0;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      &__title {
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        @media #{$md-and-up} {
+          margin-bottom: 24px;
+          text-transform: unset;
+        }
+        @media #{$xl-and-up} {
+          margin-bottom: 32px;
+        }
+      }
+      &__bottom {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &--washer {
+    .offer-wrapper__img-tech {
+      width: 101px;
+      height: 150px;
+      right: 188px;
+      bottom: -77px;
+      @media #{$md-and-up} {
+        width: 115px;
+        height: 146px;
+        bottom: -45px;
+        right: 150px;
+      }
+      @media #{$xl-and-up} {
+        width: 194px;
+        height: 242px;
+        right: 247px;
+        bottom: -83px;
+      }
+    }
+  }
+  &--dishwasher {
+    .offer-wrapper__img-tech {
+      width: 108px;
+      height: 120px;
+      right: 193px;
+      bottom: -51px;
+      @media #{$md-and-up} {
+        width: 131px;
+        height: 151px;
+        bottom: -48px;
+        right: 150px;
+      }
+      @media #{$xl-and-up} {
+        width: 221px;
+        height: 245px;
+        right: 251px;
+        bottom: -85px;
+      }
+    }
+  }
+  &--fridge {
+    .offer-wrapper__img-tech {
+      width: 115px;
+      height: 277px;
+      right: 183px;
+      bottom: -117px;
+      @media #{$md-and-up} {
+        width: 115px;
+        height: 277px;
+        bottom: -70px;
+        right: 150px;
+      }
+      @media #{$xl-and-up} {
+        width: 190px;
+        height: 458px;
+        right: 252px;
+        bottom: -126px;
+      }
+    }
+  }
+  &--hob {
+    .offer-wrapper__img-tech {
+      width: 184px;
+      height: 92px;
+      right: 162px;
+      bottom: -16px;
+      @media #{$md-and-up} {
+        width: 227px;
+        height: 114px;
+        bottom: -18px;
+        right: 123px;
+      }
+
+      @media #{$xl-and-up} {
+        width: 378px;
+        height: 191px;
+        right: 196px;
+        bottom: -38px;
+      }
+    }
+  }
+  &--kitchen-stove {
+    .offer-wrapper__img-tech {
+      width: 113px;
+      height: 149px;
+      right: 189px;
+      bottom: -79px;
+      @media #{$md-and-up} {
+        width: 121px;
+        height: 162px;
+        bottom: -56px;
+        right: 153px;
+      }
+      @media #{$xl-and-up} {
+        width: 206px;
+        height: 275px;
+        right: 251px;
+        bottom: -101px;
+      }
+    }
+  }
+  &--conditioner {
+    .offer-wrapper__img-tech {
+      width: 170px;
+      height: 84px;
+      right: 166px;
+      bottom: 12px;
+      @media #{$md-and-up} {
+        width: 213px;
+        height: 105px;
+        bottom: 13px;
+        right: 133px;
+      }
+      @media #{$xl-and-up} {
+        width: 383px;
+        height: 193px;
+        right: 191px;
+        bottom: 7px;
+      }
+    }
+  }
+  &--tv {
+    .offer-wrapper__img-tech {
+      width: 122px;
+      height: 103px;
+      right: 180px;
+      bottom: -9px;
+      @media #{$md-and-up} {
+        width: 151px;
+        height: 127px;
+        bottom: -8px;
+        right: 150px;
+      }
+      @media #{$xl-and-up} {
+        width: 319px;
+        height: 268px;
+        right: 204px;
+        bottom: -32px;
+      }
+    }
+  }
+}
+
+.sticker-sale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 8px;
+  transform: translateX(-22%);
+  left: calc((100% - 312px) / 2);
+  z-index: 2;
+  @media #{$md-and-up} {
+    width: 98px;
+    height: 98px;
+    left: calc((100% - 548px) / 2);
+    top: 13px;
+  }
+  @media #{$xl-and-up} {
+    top: 33px;
+    left: calc((100% - 1025px) / 2);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 0;
+    height: 16px;
+    width: 2px;
+    background: $orange;
+    transform: translateY(-50%);
+    @media #{$md-and-up} {
+      height: 27px;
+      left: 50px;
+    }
+    @media #{$xl-and-up} {
+      height: 63px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/icons/icon_star-sale.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+  &__shadow {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 50%;
+    top: 2px;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 12px rgba(249, 157, 21, 0.3);
+    border-radius: 50%;
+    @media #{$md-and-up} {
+      width: 72px;
+      height: 72px;
+      top: 9px;
+    }
+  }
+  &__value {
+    color: $black;
+    @include font(14, 16);
+    z-index: 2;
+    position: relative;
+    font-weight: 600;
+  }
+
+  &__value-icon {
+    width: 32px;
+    height: 14px;
+    @media #{$md-and-up} {
+      width: 54px;
+      height: 24px;
+    }
+  }
+  &--small {
+    width: 69px;
+    height: 69px;
+    top: 10px;
+    display: none;
+    left: calc((100% - 697px) / 2);
+    @media #{$md-and-up} {
+      display: flex;
+    }
+    @media #{$xl-and-up} {
+      top: 24px;
+      left: calc((100% - 1219px) / 2);
+    }
+
+    &::before {
+      left: 34px;
+    }
+    .sticker-sale {
+      &__value-icon {
+        @media #{$md-and-up} {
+          width: 22px;
+          height: 24px;
+        }
+      }
+      &__shadow {
+        @media #{$md-and-up} {
+          width: 54px;
+          height: 54px;
+          top: 4px;
+        }
+      }
+    }
+  }
+}

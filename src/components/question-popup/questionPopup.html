@@ -1,0 +1,62 @@
+<div id="question-popup" class="pop-up js-pop-up">
+  <div class="pop-up__wrapper">
+    <button type="button" class="pop-up__btn-close js-pop-up-close mfp-close">
+      <svg class="pop-up__icon-close">
+        <use xlink:href="./img/icons.svg#icon_close"></use>
+      </svg>
+    </button>
+    <div class="pop-up__container">
+      <div class="pop-up__top">
+        <div class="pop-up__title h1">Задать вопрос</div>
+        <p class="pop-up__text">Мастер ответит на ваш вопрос в течение 24 часов</p>
+      </div>
+      <div class="form form--query-repairs">
+        <form>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Ваше имя</span>
+              <input type="text" class="form__input" required />
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+          </div>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Ваш e-mail</span>
+              <input type="email" class="form__input" required />
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+            <div class="form__note">Мы отправим вам уведомление, когда мастер ответит на вопрос</div>
+          </div>
+          <div class="form__item">
+            <label class="form__label required">
+              <span>Ваш вопрос</span>
+              <textarea
+                class="form__input form__input--textarea"
+                required
+                placeholder="Пожалуйста, укажите марку и, по возможности, модель техники. Подробно опишите неисправности, чтобы мастер мог ответить."
+              ></textarea>
+              <span class="form__prompt">Тект ошибки</span>
+            </label>
+          </div>
+          <div class="form__item">
+            <div class="dropzone">
+              <div class="dropzone_preview"></div>
+              <button type="button" class="btn btn--border dz-message dropzone__button-add" data-dz-message>
+                <svg class="btn__btn-icon">
+                  <use xlink:href="./img/icons.svg#icon_clip"></use>
+                </svg>
+                <span>Прикрепить фото/видео</span>
+              </button>
+            </div>
+          </div>
+          <div class="form__buttons">
+            <a href="#question-popup-msg-popup" class="js-popup-btn btn btn--blue form__button">Отправить</a>
+            <div class="form__note">
+              Нажимая на кнопку, я даю <a href="" class="link link--blue">согласие на обработку своих персональных данных</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.actions {
+  &__title {
+    z-index: 2;
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 24px;
+    @media #{$md-and-up} {
+      margin-bottom: 32px;
+    }
+    @media #{$xl-and-up} {
+      margin-bottom: 40px;
+    }
+  }
+  &__bottom {
+    margin-top: 32px;
+    @include font(14, 22);
+    @media #{$xl-and-up} {
+      margin-top: 40px;
+      @include font(16, 24);
+    }
+  }
+}
+
+.action-item-list {
+  display: flex;
+  @media #{$md-and-up} {
+    width: auto;
+    margin: 0;
+    margin-right: -24px;
+    margin-bottom: -24px;
+  }
+  @media #{$xl-and-up} {
+    margin-bottom: -24px;
+    margin-right: 0;
+  }
+  &__item {
+    width: 228px;
+    height: 184px;
+    @media #{$md-and-up} {
+      width: 249px;
+      height: 201px;
+    }
+    @media #{$xl-and-up} {
+      margin-right: 24px;
+      margin-bottom: 24px;
+      width: 282px;
+      height: 227px;
+    }
+  }
+}

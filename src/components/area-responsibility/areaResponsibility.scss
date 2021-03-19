@@ -1,0 +1,62 @@
+.area-responsibility {
+  &__title.h2 {
+    margin-bottom: 24px;
+    @media #{$lg-and-up} {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    &:first-child {
+      @media #{$lg-and-up} {
+        margin-bottom: 16px;
+      }
+    }
+    @media #{$lg-and-up} {
+      margin-bottom: 24px;
+    }
+  }
+  &__list {
+    overflow: hidden;
+    ul {
+      min-height: 627px;
+      height: 627px;
+      @media #{$md-and-up} {
+        min-height: 315px;
+        height: 315px;
+      }
+      @media #{$lg-and-up} {
+        min-height: 300px;
+        height: 300px;
+      }
+    }
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 16px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-image: url("../../img/icons/icon_check.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        margin-right: 8px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        color: $gray;
+      }
+      .link {
+        display: inline;
+      }
+    }
+  }
+}

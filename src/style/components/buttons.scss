@@ -1,0 +1,158 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 8px 24px;
+  font-family: $font;
+  cursor: pointer;
+  @include font(16, 24);
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+  &--orange {
+    position: relative;
+    background: $orange;
+    color: $white;
+    font-weight: 500;
+    @include font(16, 24);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(249, 157, 21, 0.3);
+    border-radius: 32px;
+    transition: box-shadow 0.3s, background .3s;
+    &:hover {
+      box-shadow: 0px 4px 12px rgba(249, 157, 21, 0.3);
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      background: linear-gradient(90deg, #f96715 0%, #f98315 51.56%, #f96715 100%);
+      width: 100%;
+      height: 100%;
+      transition: opacity .3s;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  &--border {
+    border-radius: 24px;
+    border: 1px solid $blue;
+    color: $blue;
+    transition: background-color .3s;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+    .btn {
+      &__text {
+        @include font(16, 24);
+      }
+    }
+    .btn__btn-icon {
+      width: 24px;
+      height: 16px;
+      fill: currentColor;
+      line-height: 24;
+    }
+  }
+
+  &--blue {
+    color: $white;
+    background: $blue;
+    border-radius: 32px;
+    box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+    transition: background-color .3s;
+    &:hover {
+      background-color: $deep-blue;
+    }
+  }
+  &--like {
+    padding: 0;
+  }
+}
+
+.btn-read-more {
+  display: inline-block;
+  position: relative;
+  padding-left: 0;
+  padding-right: 25px;
+  @include font(16, 24);
+  color: $blue;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  &:hover {
+    color: $deep-blue;
+
+    &:after {
+      background-image: url("../../img/icons/icon_arrow-deep-blue.svg");
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 12px;
+    height: 7px;
+    background: transparent url("../../img/icons/icon_arrow-blue.svg") no-repeat center right;
+  }
+  &--roll-up,
+  &--active {
+    &::after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+}
+.btn-arrow {
+  color: $blue;
+  font-weight: 600;
+  &__icon {
+    width: 24px;
+    height: 16px;
+    margin-left: 8px;
+    fill: currentColor;
+  }
+}
+
+.btn-popup {
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  background: $orange;
+  color: $white;
+  font-weight: 500;
+  @include font(16, 26);
+  box-shadow: 0 4px 12px rgba(35, 100, 175, 0.2);
+  border-radius: 12px;
+  transition: box-shadow 0.3s;
+  padding: 4px 40px;
+  min-height: 84px;
+  &:hover {
+    background: linear-gradient(90deg, #f96715 0%, #f98315 51.56%, #f96715 100%);
+    box-shadow: 0 4px 12px rgba(249, 157, 21, 0.3);
+  }
+  @media #{$xl-and-up} {
+    min-height: 72px;
+  }
+  &__text {
+    text-transform: uppercase;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+}
